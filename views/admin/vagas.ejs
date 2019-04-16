@@ -1,0 +1,28 @@
+
+<%- include(('header')) %>
+
+<h2>Admin Vagas</h2>
+
+<div id="content">
+    <table border="1" style="width:500px" >
+        <tr>
+            <th><a href="/admin/vaga">Nova Vaga</a> </th>
+            <th style="width:40px" >#</th>
+            <th>Titulo</th>
+        </tr>
+        <% vagas.forEach( vaga => { %> 
+        <tr>
+         
+            <td><a href="/admin/vaga/<%- vaga.id %>">Editar</a>|<a href="/admin/vaga/excluir/<%- vaga.id %>">Excluir</a> </td>
+            <td><%- vaga.id %> </td>
+            <td><%- vaga.titulo %> </td>
+               
+        </tr>
+        <% }) %>
+    </table>
+    
+</div>
+
+
+
+<%- include(('footer')) %>

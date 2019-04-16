@@ -1,0 +1,38 @@
+<%- include(('header')) %>
+<h2>Admin Vagas - Inserir</h2>
+<form method="POST">
+<div id="content" style="justify-content: center; align-items: center;">
+    <table align="center" style="background-color: lightblue;width: 500px;"  >
+       
+        <tr>
+            <td>Título: </td>
+            <td><input type="text" id="titulo" name="titulo" size="60"  > </td>
+        </tr>
+        <tr>
+            <td> Descrição:</td>
+            <td><textarea rows="5" cols="60" id="descricao" name="descricao"  ></textarea> </td>
+        </tr>
+        <td> Categoria:</td>
+            <td> 
+                <select id="categoria" name="categoria" style="width: 200px;" >
+                        <option  >Selecione</option>
+                        
+                        <% categorias.forEach(categoria => { %>
+                    <option value="<%- categoria.id %>"  ><%- categoria.categoria %></option>
+                  
+                    <% }) %>
+                  </select> 
+            </td>
+               
+        </tr>
+        <tr>
+            <td rowspan="2" ></td>
+            <td><button >salvar</button></td>
+            
+        </tr>
+    </table>
+    
+</div>
+</form>
+
+<%- include(('footer')) %>
