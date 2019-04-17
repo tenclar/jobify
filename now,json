@@ -1,6 +1,6 @@
 {
   "builds": [
-    { "src": "*.html", "use": "@now/public" },
+    { "src": "*.html", "use": "@now/static" },
     { "src": "index.js", "use": "@now/node" }
   ]
 }
