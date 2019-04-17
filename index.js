@@ -99,7 +99,7 @@ app.post('/admin/vaga', async(req,res)  => {
   res.redirect('/admin/vagas')
 })
 
-app.listen(3000, (err) => {
+app.listen(port, (err) => {
     if(err) {
         console.log('Não foi possível iniciar o servidor do Jobify. ' )
     } else {
