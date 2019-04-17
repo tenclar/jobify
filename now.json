@@ -1,4 +1,8 @@
+
 {
   "version": 2,
-  "alias":["jobify"]
+  "builds": [
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "date.js", "use": "@now/node" }
+  ]
 }
