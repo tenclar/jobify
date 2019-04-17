@@ -68,6 +68,12 @@ app.get('/admin/vagas', async(req, res) =>{
   })
 })
 
+app.get('/admin/vaga/excluir/:id', async(req, res) =>{
+  const db  = await dbConnection 
+  await db.get('delete from vagas where id = ' + req.params.id )
+  res.redirect('/admin/vagas')
+  
+})
 app.get('/admin/vaga/:id', async(req, res) =>{
   const db  = await dbConnection 
   const vaga = await db.get('select * from vagas where id = ' + req.params.id )
